@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JFS D&D 2023</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #333;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+        }
+
+        .topic-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .topic-list li {
+            margin-bottom: 10px;
+            color: #555;
+            cursor: pointer;
+        }
+
+        .topic-list li::before {
+            content: "\f078";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            margin-right: 10px;
+            color: #333;
+        }
+
+        .topic-list li.active::before {
+            content: "\f077";
+        }
+
+        .topic-description {
+            display: none;
+            margin-left: 30px;
+            color: #777;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-center mb-4">Java Fullstack Design & Development</h1>
+        <div class="section">
+            <h2 class="section-title">Backend Technologies</h2>
+            <ul class="topic-list">
+                <li>Core Java</li>
+                <div class="topic-description">Java is a popular programming language used for building scalable and
+                    robust backend applications.</div>
+                <li>JDBC (Java Database Connectivity)</li>
+                <div class="topic-description">JDBC is a Java API that enables Java applications to interact with
+                    databases using SQL queries.</div>
+                <li>Advanced Java</li>
+                <div class="topic-description">Advanced Java covers advanced topics in Java, including Java EE and web
+                    development.</div>
+                <li>Servlets & JSP</li>
+                <div class="topic-description">Servlets and JSP (JavaServer Pages) are Java technologies used for
+                    building dynamic web applications.</div>
+                <li>Spring</li>
+                <div class="topic-description">Spring is a popular framework for building enterprise-level Java
+                    applications.</div>
+                <li>Spring Boot</li>
+                <div class="topic-description">Spring Boot is a framework that simplifies the development of Spring
+                    applications.</div>
+                <li>JPA</li>
+                <div class="topic-description">JPA (Java Persistence API) is a specification for accessing, managing,
+                    and persisting data between Java objects and a relational database.</div>
+                <li>Webservices</li>
+                <div class="topic-description">Web services enable communication between different applications over the
+                    internet.</div>
+                <li>REST</li>
+                <div class="topic-description">REST (Representational State Transfer) is an architectural style used for
+                    building scalable web services.</div>
+                <li>SOAP</li>
+                <div class="topic-description">SOAP (Simple Object Access Protocol) is a protocol for exchanging
+                    structured information in web services.</div>
+            </ul>
+        </div>
+        <div class="section">
+            <h2 class="section-title">Databases</h2>
+            <ul class="topic-list">
+                <li>MySQL</li>
+                <div class="topic-description">MySQL is a popular open-source relational database management system.
+                </div>
+                <li>Oracle</li>
+                <div class="topic-description">Oracle Database, an enterprise-grade relational database management
+                    system. Oracle Database is known for its scalability, reliability, and high performance, making it a
+                    popular choice for large-scale applications and mission-critical systems. It supports various
+                    advanced features, including PL/SQL (Procedural Language/SQL) for developing stored procedures,
+                    triggers, and functions, as well as powerful data analysis and reporting capabilities. Oracle
+                    Database is widely used in industries such as finance, healthcare, government, and
+                    telecommunications for managing vast amounts of data efficiently and securely.</div>
+                <li>PostgreSQL</li>
+                <div class="topic-description">PostgreSQL is a powerful open-source object-relational database system.
+                </div>
+                <li>MongoDB</li>
+                <div class="topic-description">MongoDB is a popular NoSQL document-oriented database.</div>
+            </ul>
+        </div>
+        <div class="section">
+            <h2 class="section-title">Frontend Technologies</h2>
+            <ul class="topic-list">
+                <li>HTML</li>
+                <div class="topic-description">HTML (Hypertext Markup Language) is the standard markup language for
+                    building web pages and applications.</div>
+                <li>CSS</li>
+                <div class="topic-description">CSS (Cascading Style Sheets) is used for styling HTML elements and
+                    creating visually appealing web pages.</div>
+                <li>Bootstrap</li>
+                <div class="topic-description">Bootstrap is a popular CSS framework that helps in building responsive
+                    and mobile-first web applications.</div>
+                <li>Javascript</li>
+                <div class="topic-description">JavaScript is a versatile programming language used for adding
+                    interactivity to web pages.</div>
+                <li>Jquery</li>
+                <div class="topic-description">jQuery is a fast and lightweight JavaScript library that simplifies DOM
+                    manipulation and event handling.</div>
+                <li>React</li>
+                <div class="topic-description">React is a JavaScript library for building user interfaces, particularly
+                    single-page applications.</div>
+            </ul>
+        </div>
+        <div class="section">
+            <h2 class="section-title">Software Design</h2>
+            <ul class="topic-list">
+                <li>Data Structures & Algorithms</li>
+                <div class="topic-description">Data structures and algorithms are fundamental concepts in computer
+                    science used for solving problems efficiently.</div>
+                <li>Design Patterns</li>
+                <div class="topic-description">Design patterns are reusable solutions to commonly occurring problems in
+                    software design.</div>
+                <li>Architectures</li>
+                <div class="topic-description">Software architectures define the structure and components of a software
+                    system.</div>
+                <li>Monolithic</li>
+                <div class="topic-description">Monolithic architecture is a traditional approach where the entire
+                    application is built as a single, large codebase.</div>
+                <li>MVC</li>
+                <div class="topic-description">MVC (Model-View-Controller) is a software architectural pattern commonly
+                    used in web development.</div>
+                <li>Microservices</li>
+                <div class="topic-description">Microservices is an architectural style where an application is composed
+                    of small, loosely coupled services.</div>
+            </ul>
+        </div>
+        <div class="section">
+            <h2 class="section-title">Essential Technologies and Tools for Modern Software Development</h2>
+            <ul class="topic-list">
+                <li>Git & Github</li>
+                <div class="topic-description">Git is a version control system used for tracking changes in code, and
+                    Github is a web-based platform for hosting Git repositories.</div>
+                <li>Docker</li>
+                <div class="topic-description">Docker is a containerization platform that allows developers to package
+                    applications and their dependencies into containers.</div>
+                <li>GCP (Google Cloud Platform)</li>
+                <div class="topic-description">GCP is a cloud computing platform that provides various services for
+                    building, deploying, and managing applications.</div>
+                <li>Maven</li>
+                <div class="topic-description">Maven is a build automation tool used primarily for Java projects to
+                    manage dependencies and build processes.</div>
+                <li>Linux</li>
+                <div class="topic-description">Linux is an open-source operating system commonly used for web servers
+                    and development environments.</div>
+                <li>Kafka</li>
+                <div class="topic-description">Kafka is a distributed event streaming platform used for building
+                    real-time data pipelines and streaming applications.</div>
+            </ul>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Toggle the topic description on clicking the list item
+            $('.topic-list li').click(function () {
+                $(this).toggleClass('active').next('.topic-description').slideToggle();
+            });
+        });
+    </script>
+</body>
+
+</html>
