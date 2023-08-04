@@ -1,230 +1,179 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Session 2 || JFS D&D 2023</title>
-    <!-- Add Prism.js CSS and JavaScript links -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet">
+    <title>Session 1 || JFS D&D 2023</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
-        /* Custom CSS styles for terminal-like output */
-        .terminal {
-            background-color: black;
-            color: white;
-            padding: 10px;
-            font-family: monospace;
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            background-color: #f2f2f2;
+            padding: 20px;
         }
 
-        .command {
-            color: lime;
+        .section-container {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
         }
 
-        pre {
-            background-color: #282c34;
-            /* Programmer-friendly dark background color */
-            color: #abb2bf;
-            /* Text color for code */
-            font-family: "Fira Code", monospace;
-            /* Use Fira Code font for code */
+        .section-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .instruction-list {
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        .command,
+        .output {
+            background-color: #f2f2f2;
             padding: 10px;
             border-radius: 5px;
-            line-height: 1.5;
-            overflow: auto;
+            font-family: "Consolas", "Courier New", Courier, monospace;
+            color: #000;
+            margin-bottom: 10px;
+            white-space: pre-wrap;
+        }
+
+        pre code {
+            display: block;
+            padding: 10px;
+            overflow-x: auto;
+            background-color: #f2f2f2;
+            border-radius: 5px;
+            font-family: Consolas, "Courier New", Courier, monospace;
+            color: #000;
+            white-space: pre-wrap;
         }
     </style>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
 </head>
 
 <body>
-    <div class="container mt-5">
-        <h1 class="display-4">JFS D&amp;D 2023 Session 2</h1>
-
-        <div class="row mt-4">
-            <div class="col">
-                <h2>What is Java?</h2>
-                <p>
-                    Java is a high-level, object-oriented programming language known for its platform independence,
-                    robustness, and versatility. It was developed by James Gosling and his team at Sun Microsystems and
-                    was released to the public in 1995. Java applications can run on any platform that supports a Java
-                    Virtual Machine (JVM), thanks to its "write once, run anywhere" (WORA) capability.
-                </p>
-            </div>
-        </div>
-
-        <div class="row mt-4">
-            <div class="col">
-                <h2>Writing your first Java program</h2>
-                <p>
-                    The first Java program, often called the "Hello, World!" program, simply prints "Hello, World!" to
-                    the console.
-                </p>
-                <pre><code class="language-java">public class HelloWorld {
-  public static void main(String[] args) {
-    System.out.println("Hello, World!");
-  }
-}</code></pre>
-            </div>
-        </div>
-
-        <div class="row mt-4">
-            <div class="col">
-                <h2>Important parts of the program</h2>
-                <p>
-                    This topic covers the basic components of a Java program, including classes, methods, variables, and
-                    the main method where program execution starts.
-                </p>
-                <pre><code class="language-java">public class MyProgram {
-  // This is a class with one main method
-  public static void main(String[] args) {
-    // This is the main method where the program execution starts
-    int x = 10; // This is a variable declaration and initialization
-    System.out.println("The value of x is: " + x); // Printing the value of x
-  }
-}</code></pre>
-            </div>
-        </div>
-
-        <div class="row mt-4">
-            <div class="col">
-                <h2>Compile your code &amp; see the output</h2>
-                <p>
-                    To compile and run a Java program, you need to use the Java Development Kit (JDK). The
-                    <code>javac</code> command is used to compile the code, and the <code>java</code> command is used to
-                    run the compiled program.
-                </p>
-                <p>
-                    Save the code from the previous topic in a file named <code>MyProgram.java</code>. Open the terminal
-                    or command prompt, navigate to the folder containing the file, and then compile and run the program:
-                </p>
-                <pre><code class="language-bash">javac MyProgram.java   // Compiles the code
-java MyProgram         // Executes the compiled program</code></pre>
-                <p>Output:</p>
-                <pre><code>The value of x is: 10</code></pre>
-            </div>
-        </div>
-
-        <div class="row mt-4">
-            <div class="col">
-                <h2>Coding vs. programming</h2>
-                <p>
-                    This topic explores the distinction between coding and programming. Coding refers to the process of
-                    writing code, while programming involves the broader process of designing, creating, and testing
-                    software solutions.
-                </p>
-            </div>
-        </div>
-
-        <div class="row mt-4">
-            <div class="col">
-                <h2>Let us print conditionally</h2>
-                <p>
-                    Conditional statements in Java, like <code>if</code>, <code>else if</code>, and <code>else</code>,
-                    allow you to execute specific blocks of code based on certain conditions.
-                </p>
-                <pre><code class="language-java">public class ConditionalPrint {
-  public static void main(String[] args) {
-    int num = 7;
-    if (num > 5) {
-      System.out.println("Number is greater than 5.");
-    } else {
-      System.out.println("Number is not greater than 5.");
-    }
-  }
-}</code></pre>
-            </div>
-        </div>
-
-        <div class="row mt-4">
-            <div class="col">
-                <h2>Stuck in a loop</h2>
-                <p>
-                    Loops in Java, such as <code>for</code>, <code>while</code>, and <code>do-while</code>, enable you
-                    to execute a block of code repeatedly until a specified condition is met.
-                </p>
-                <pre><code class="language-java">public class LoopExample {
-  public static void main(String[] args) {
-    // Example of a for loop
-    for (int i = 1; i <= 5; i++) {
-      System.out.println("Iteration: " + i);
-    }
-
-    // Example of a while loop
-    int count = 1;
-    while (count <= 5) {
-      System.out.println("While loop iteration: " + count);
-      count++;
-    }
-  }
-}</code></pre>
-            </div>
-        </div>
-
-        <div class="row mt-4">
-            <div class="col">
-
-            </div>
-        </div>
-
-    </div>
-
-    <!-- Bootstrap JS and jQuery (optional) -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
 
     <div class="container mt-5">
-        <h1 class="mb-4">Java Calculator</h1>
-        <pre><code class="language-java">
-import java.util.Scanner;
+        <h1 class="display-4">JFS D&amp;D 2023 Session 1</h1>
+        <div class="section-container">
+            <h2 class="section-title">OpenJDK 8 Installation Instructions for Windows</h2>
+            <ol class="instruction-list">
+                <li>Go to the openlogic website (<a href="https://www.openlogic.com/openjdk-downloads"
+                        target="_blank">https://www.openlogic.com/openjdk-downloads</a>) or any other trusted source
+                    that provides OpenJDK distributions.</li>
+                <li>Download the appropriate version of OpenJDK 8 for your Windows architecture (32-bit or 64-bit) and
+                    check if it matches your system's requirements.</li>
+                <li>Double-click the downloaded installer file (e.g., <code
+                        class="command">openjdk-8uXXX_windows-x64_bin.msi</code>) to start the installation process.
+                </li>
+                <li>The installation wizard will open. Click "Next" to proceed.</li>
+                <li>Accept the license agreement and click "Next."</li>
+                <li>Choose the installation directory (by default, it's usually in <code
+                        class="command">C:\Program Files\openlogic\jdk-8.X.X</code>), or you can choose another
+                    directory if you prefer. Click "Next."</li>
+                <li>Select the installation type. If you want OpenJDK to be available for all users on the computer,
+                    choose "Anyone who uses this computer." Otherwise, select "Just me." Click "Next."</li>
+                <li>Click "Install" to begin the installation process.</li>
+                <li>The installation will take a few moments. Once it's complete, click "Finish" to close the
+                    installation wizard.</li>
+            </ol>
+            <h3 class="section-title">Set Environment Variables</h3>
+            <p>If you want to use OpenJDK in command prompt or other applications, you can set the JAVA_HOME and Path
+                environment variables. Here's how to do it:</p>
+            <ol class="instruction-list">
+                <li>Search for "Environment Variables" in the Start menu and select "Edit the system environment
+                    variables."</li>
+                <li>In the System Properties window, click the "Environment Variables" button.</li>
+                <li>In the Environment Variables window, under "User variables for [your-username]," click "New."</li>
+                <li>For the Variable name, enter <code class="command">JAVA_HOME</code>.</li>
+                <li>For the Variable value, enter the path to your Java installation directory, for example, <code
+                        class="command">C:\Program Files\openlogic\jdk-8.X.X</code> (replace "X" with the specific
+                    version number).</li>
+                <li>Click "OK" to save the changes.</li>
+                <li>In the same Environment Variables window, under "User variables for [your-username]," find the
+                    "Path" variable and click "Edit."</li>
+                <li>In the Edit Environment Variable window, click "New."</li>
+                <li>Enter <code class="command">%JAVA_HOME%\bin</code>.</li>
+                <li>Click "OK" to save the changes.</li>
+            </ol>
+            <h3 class="section-title">Verify the Installation</h3>
+            <ol class="instruction-list">
+                <li>Open the command prompt by pressing "Win + R," typing "cmd," and hitting "Enter."</li>
+                <li>Type the following command and press "Enter":</li>
+                <li><code class="command">javac -version</code></li>
+                <li>If the installation was successful, you should see the version information for OpenJDK 8 displayed
+                    on the screen, similar to this:</li>
+                <li><code class="output">javac 1.8.0_291</code></li>
+            </ol>
+        </div>
 
-public class Calculator {
+        <div class="section-container">
+            <h2 class="section-title">How to Check if JDK is Installed</h2>
+            <ol class="instruction-list">
+                <li>Open the command prompt (Windows) or terminal (macOS/Linux).</li>
+                <li>Type the following command and press Enter:</li>
+            </ol>
+            <div class="command">
+                javac -version
+            </div>
+            <p>If the JDK is installed, you will see the version information for the Java compiler. It should look
+                similar to this:</p>
+            <div class="output">
+                javac 1.8.0_291
+            </div>
+            <p>If you see a version number, it means that the JDK and its compiler are installed on your system. If you
+                see an error message like "javac: command not found," then the JDK is not installed or not properly
+                configured.</p>
+        </div>
 
-    public static void main(String[] args) {
-
-        int a, b, sum, diff, pro, div;
-
-        Scanner sc = new Scanner(System.in);
-
-        System.out.print("a=");
-        a = sc.nextInt();
-        sc.nextLine();
-
-        System.out.print("b=");
-        b = sc.nextInt();
-        sc.nextLine();
-
-        sum = a + b;
-        diff = a - b;
-        pro = a * b;
-        div = a / b;
-
-        System.out.println("a+b=" + sum);
-        System.out.println("a-b=" + diff);
-        System.out.println("a*b=" + pro);
-        System.out.println("a/b=" + div);
-
-    }
-
-}
-    </code></pre>
-
-        <h2 class="mt-5">Compile and Run:</h2>
-        <pre><code class="language-bash">
-<span class="command">$</span> javac Calculator.java
-<span class="command">$</span> java Calculator
-    </code></pre>
-
-        <h2 class="mt-5">Output:</h2>
-        <div class="terminal">
-            <p>a=10</p>
-            <p>b=5</p>
-            <p>a+b=15</p>
-            <p>a-b=5</p>
-            <p>a*b=50</p>
-            <p>a/b=2</p>
+        <div class="section-container">
+            <h2 class="section-title">Write and Run a "Hello, World!" Java Program</h2>
+            <p>Let's write a simple "Hello, World!" Java program and run it using the Command Prompt.</p>
+            <ol class="instruction-list">
+                <li>Open Notepad or any text editor.</li>
+                <li>Copy the following Java code and paste it into the text editor:</li>
+            </ol>
+            <div class="hello-world-code">
+                <pre><code class="language-java">
+                public class HelloWorld {
+                    public static void main(String[] args) {
+                        System.out.println("Hello, World!");
+                    }
+                }
+            </code></pre>
+            </div>
+            <ol class="instruction-list">
+                <li>Save the file with the name <code class="command">HelloWorld.java</code>. Make sure to select "All
+                    Files" as the file type and add the ".java" extension at the end of the filename (e.g., <code
+                        class="command">HelloWorld.java</code>).</li>
+                <li>Open the Command Prompt by pressing "Win + R," typing "cmd," and hitting "Enter."</li>
+                <li>Navigate to the location where you saved the <code class="command">HelloWorld.java</code> file using
+                    the <code class="command">cd</code> command.</li>
+                <li>Compile the Java program using the <code class="command">javac</code> command:</li>
+            </ol>
+            <div class="command">
+                javac HelloWorld.java
+            </div>
+            <p>If there are no errors in your code, the compilation will be successful, and a new file named <code
+                    class="command">HelloWorld.class</code> will be created in the same directory.</p>
+            <ol class="instruction-list">
+                <li>Run the Java program using the <code class="command">java</code> command:</li>
+            </ol>
+            <div class="command">
+                java HelloWorld
+            </div>
+            <p>If everything is correct, you should see the output:</p>
+            <div class="output">
+                Hello, World!
+            </div>
+            <p>Congratulations! You've written, compiled, and executed your first Java program.</p>
         </div>
     </div>
+
 </body>
 
 </html>
